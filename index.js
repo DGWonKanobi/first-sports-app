@@ -15,11 +15,10 @@ app.get('/addStats/:num1/:num2', (req, res) => {
     return res.json({ answer: answer });
 
 });
-
+//route1 // Add Players Stats // Example : localhost:8000/add/7/8
+//route2 //sports nick names //Example : localhost: 8000/read?something=story 
 app.get('/read', (req, res) => {
-    // grab the query string, 
-    // pass the querystring into the fs funtcion 
-    // return the data that comes from the text file
+    
     let element = req.query.something; //the answer
     
     fs.readFile(`${element}.txt`, 'utf8',  (error, data) =>{
