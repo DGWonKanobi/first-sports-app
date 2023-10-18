@@ -6,7 +6,9 @@ const fs = require('fs');
 // testing core module with (fs)
 
 //First Route with an instance of teh constant app w/ attached function : get 
-app.get('/', (req, res) =>{});
+app.get('/', (req, res) =>{
+    res.json({message:" Hello from my Home Route"})
+});
 
 app.get('/addStats/:num1/:num2', (req, res) => {
     let num1 = Number(req.params.num1); //make number?
